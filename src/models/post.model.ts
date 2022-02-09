@@ -18,10 +18,10 @@ const postSchema = new Schema<IPost, PostModel>({
   body: String,
 });
 
+const Post = model<IPost, PostModel>('Post', postSchema);
+
 postSchema.statics.build = (val: IPost) => {
   return new Post(val);
 };
-
-const Post = model<IPost, PostModel>('Post', postSchema);
 
 export { Post };

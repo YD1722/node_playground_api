@@ -8,6 +8,7 @@ router.get('/', (req: Request, res: Response) => {
 });
 
 router.get('/api/posts', (req: Request, res: Response) => {
+
   return res.send('get:posts');
 });
 
